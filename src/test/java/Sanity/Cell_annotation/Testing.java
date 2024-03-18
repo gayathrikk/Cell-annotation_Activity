@@ -41,19 +41,19 @@ public class Testing {
 	    @BeforeTest
 	    public void setup() throws Exception {
 	    	DesiredCapabilities dc = DesiredCapabilities.chrome();
-	    	URL url = new URL("http://172.20.23.7:5555/wd/hub/");
+	    	URL url = new URL("http://172.12.20.99:4443/wd/hub/");
 	    	driver = new RemoteWebDriver(url, dc);
 
 	        wait = new WebDriverWait(driver, 10); // Adjust the timeout as needed
 	    }
-	    @Parameters("URL")
+	    //@Parameters("URL")
 	    @Test(priority = 1)
-	   public void login(@Optional("defaultURL") String URL) 
-	   //public void login() 
+	   //public void login(@Optional("defaultURL") String URL) 
+	   public void login() 
 	    {
 	   
-	    	driver.get(URL);
-	    	//driver.get("https://apollo2.humanbrain.in/viewer/annotation/portal");
+	    	//driver.get(URL);
+	    	driver.get("https://apollo2.humanbrain.in/viewer/annotation/portal");
 			driver.manage().window().maximize();
 	        String currentURL = driver.getCurrentUrl();
 	        System.out.println("Current URL: " + currentURL);
@@ -87,7 +87,7 @@ public class Testing {
 	        }
 	        WebElement emailInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='email']")));
 	        if (emailInput != null && emailInput.isDisplayed()) {
-	            emailInput.sendKeys("teamsoftware457@gmail.com");
+	            emailInput.sendKeys("softwareteam45@gmail.com");
 	            System.out.println("Email was entered successfully.");
 	        } else {
 	           System.out.println("Email was not entered.");
@@ -184,7 +184,7 @@ public class Testing {
 		        }
 	    	 
 	    	 try {
-	  		    WebElement section = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[text()='712'])[1]")));
+	  		    WebElement section = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[text()='727'])[1]")));
 	  		    section.click();
 	  		    System.out.println("section clicked successfully.");
 	  		    Thread.sleep(2000);
