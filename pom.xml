@@ -77,7 +77,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M5</version>
           <configuration>
-            <test>Sanity.Cell_annotation.Today_activity</test>
+            <test>Sanity.Cell_annotation.Cellannotation_Activity</test>
           </configuration>
         </plugin>
       </plugins>
